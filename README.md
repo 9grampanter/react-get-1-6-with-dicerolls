@@ -1,3 +1,7 @@
+# Roll the complete ladder from dicerolls and win
+## How to play!
+Click the button as many times as needed to get a full ladder by just rolling a dice
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
