@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homePage {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.diceThowContainer {
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.7rem;
+  margin-top: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topDiceRow {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
+
+.dice {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "topL topM topR"
+  "midL midM midR"
+  "botL botM botR"
+  ;
+  border-radius: 0.5rem;
+  border: solid black 1px;
+}
+
+.bigDice {
+  width: 125px;
+  height: 125px;
+  border: 1px solid black;
+}
+
+.smallDice {
+  margin: 0.5rem 1rem;
+  width: 6rem;
+  height: 6rem;
+}
+
+.fade {
+  opacity: 0.3;
+}
+
+.dotContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 45%;
+  background-color: black;
+}
+
+.dice-5 .dotContainer:nth-child(2) {
+  grid-area: midL;
+}
+.dice-5 .dotContainer:nth-child(3) {
+  grid-area: botL;
+}
+.dice-5 .dotContainer:nth-child(4) {
+  grid-area: topR;
+}
+.dice-5 .dotContainer:nth-child(5) {
+  grid-area: midR;
+}
+.dice-5 .dotContainer:nth-child(6) {
+  grid-area: botR;
+}
+
+.dice-4 .dotContainer:nth-child(2) {
+  grid-area: topR;
+}
+.dice-4 .dotContainer:nth-child(3) {
+  grid-area: midM;
+}
+.dice-4 .dotContainer:nth-child(4) {
+  grid-area: botL;
+}
+.dice-4 .dotContainer:nth-child(5) {
+  grid-area: botR;
+}
+.dice-4 .dotContainer:nth-child(6) {
+  display: none;
+}
+
+.dice-3 .dotContainer {
+  display: none;
+}
+.dice-3 .dotContainer:nth-child(1) {
+  display: flex;
+}
+.dice-3 .dotContainer:nth-child(2) {
+  display: flex;
+  grid-area: topR;
+}
+.dice-3 .dotContainer:nth-child(3) {
+  display: flex;
+  grid-area: botL;
+}
+.dice-3 .dotContainer:nth-child(4) {
+  display: flex;
+  grid-area: botR;
+}
+
+.dice-2 .dotContainer {
+  display: none;
+}
+.dice-2 .dotContainer:nth-child(1) {
+  display: flex;
+  grid-area: topR;
+}
+.dice-2 .dotContainer:nth-child(2) {
+  display: flex;
+  grid-area: midM;
+}
+.dice-2 .dotContainer:nth-child(3) {
+  display: flex;
+  grid-area: botL;
+}
+
+.dice-1 .dotContainer {
+  display: none;
+}
+.dice-1 .dotContainer:nth-child(1) {
+  display: flex;
+  grid-area: topL;
+}
+.dice-1 .dotContainer:nth-child(2) {
+  display: flex;
+  grid-area: botR;
+}
+
+.dice-0 .dotContainer {
+  display: none;
+}
+.dice-0 .dotContainer:nth-child(1) {
+  display: flex;
+  grid-area: midM;
+}
+
+/* .dice-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dice-2 {
+
+} */
